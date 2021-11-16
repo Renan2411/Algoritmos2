@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1629120198 source:c:\users\renan\documents\algoritmos\str3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

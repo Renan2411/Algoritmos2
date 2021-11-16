@@ -1,0 +1,16 @@
+================
+HABITANTE 0
+
+IDADE: 18
+SEXO: f
+FILHOS: 3
+SALARIO: 1000.000000
+
+================
+HABITANTE 1
+
+IDADE: 18
+SEXO: m
+FILHOS: 0
+SALARIO: 200.000000
+

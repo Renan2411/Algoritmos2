@@ -1,0 +1,38 @@
+Para fazer a aritmética de matrizes com ponteiros, podemos considerar que uma matriz bidimensional nada mais é do que um vetor, capaz de armazenar vetores dentro de si. Dessa forma, podemos entender que uma matriz, por pussuir diversos vetores, terá um espaço linear dentro da memória, e, então, podemos tratar uma matriz 3x3, como um ponteiro para um Vetor[3x3], e usar a aritmética de ponte que já conhecemos. Desta forma, vamos ver o códigoa seguir: 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int mat[3][3];
+    int *pont;
+
+    pont = mat;
+
+    //Atribuindo os valores na matriz com ponteiros
+    for (int i = 0; i < (3 * 3); i++)
+    {
+        *(pont + i) = i;
+    }
+
+    //Mostrando os valores armazenados na matriz
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("[%d]\t", mat[i][j]);
+        }
+        printf("\n");
+    }
+    
+    //Mostrando os valores da matriz com aritmética de ponteiros
+    for (int i = 0; i < 3 * 3; i++)
+    {
+        printf("[%d]\t", *(pont + i));
+    }
+
+    return 0;
+}
+
+Neste código podemos ver o exemplo dado. Ao atribuirmos o endereço da matriz na posição 0 para o ponteiro, conseguimos ter acesso a todas suas posições, como podemos observar no primeiro laço, onde atribuimos os valores à matriz por meio da aritmética de ponteiros. No terceiro laço, podemos ver a impressão dos valores da matriz com aritmética de ponteiros, da mesma forma que fazíamos com um vetor. Considerando que a memória é alocada de forma linear, a aritmética comum de ponteiros consegue ser utilizada para o caso de matrizes.

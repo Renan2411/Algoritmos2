@@ -1,0 +1,13 @@
+int main() {
+    int i;
+    int vetor[] = {4, 5, 6}; // Declarando e Preenchendo o Vetor com 3 posições
+    int *p; //Declarando um ponteiro
+
+    p = vetor + 2; //Aqui estou usando uma aritmética para pegar a ultima posição do vetor de 3 posições;
+    //é como escrever p = &vetor[0] + 2 posições na memória;
+
+    for (i = 0; i < 3; i++)//for que vai de 0 até 2, tamanho máximo do vetor
+        printf("%d ", *(p - i)); // Imprimindo os valores através da aritmética de ponteiros, usando a subtração, visto que este ponteiro começou com a última posição do vetor, então vai do ultimo ao primeiro;
+
+    return 0;
+}

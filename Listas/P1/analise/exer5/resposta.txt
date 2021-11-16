@@ -1,0 +1,8 @@
+int i , j , s ;
+s = 0;
+for (i = 1; i < N − 1; i ++) //O(N - 1)
+    for (j = 1; j < 2 ∗ N; j ++) //O(N * 2)
+        s = s + 1;
+
+
+Complexidade => O(N - 1) * O(2N) => O(2N^2 - 2N) => O(N^2 - N) => O(N^2) 

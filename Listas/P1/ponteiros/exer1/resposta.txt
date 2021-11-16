@@ -1,0 +1,6 @@
+int vox;
+int *invox;
+
+invox = &vox;
+
+*invox == vox; letra b)
